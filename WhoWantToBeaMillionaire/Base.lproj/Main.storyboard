@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Start Game View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="newGame" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="StartGameViewController" customModule="WhoWantToBeaMillionaire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleAspectFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHs-EX-dUA">
+                                <rect key="frame" x="97" y="628" width="220" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="iHb-za-hDZ"/>
+                                    <constraint firstAttribute="height" constant="40" id="igS-Xw-OY4"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Результаты" cornerStyle="dynamic">
+                                    <backgroundConfiguration key="background" cornerRadius="10" strokeWidth="3" strokeOutset="4">
+                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                        <color key="strokeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Didot" family="Didot" pointSize="28"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemTealColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="fVb-8i-WP4" kind="presentation" id="Klc-nr-JTZ"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="7Lsds80iqM8iD-" translatesAutoresizingMaskIntoConstraints="NO" id="zvp-RC-ish">
+                                <rect key="frame" x="50" y="114" width="314" height="314"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zvp-RC-ish" secondAttribute="height" multiplier="300:300" id="B2l-Qd-s1l"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17" scale="small" weight="light"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvF-k1-Xsa">
+                                <rect key="frame" x="97" y="528" width="220" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="5iv-fa-SDO"/>
+                                    <constraint firstAttribute="height" constant="40" id="9TR-Au-LRi"/>
+                                    <constraint firstAttribute="width" constant="220" id="QKK-bv-zpV"/>
+                                </constraints>
+                                <buttonConfiguration key="configuration" style="filled" title="Новая игра" cornerStyle="dynamic">
+                                    <backgroundConfiguration key="background" cornerRadius="10" strokeWidth="3" strokeOutset="4">
+                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                        <color key="strokeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Didot" family="Didot" pointSize="28"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemTealColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="mRa-4Y-FzR" kind="show" identifier="startToGame" id="DyI-MV-4rk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество отвеченных вопросов:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLb-7k-zou">
+                                <rect key="frame" x="87" y="758.5" width="240" height="21.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="oHh-yD-9SZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество выигранных денег:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KvZ-01-Zfm">
+                                <rect key="frame" x="87" y="788" width="240" height="21.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="gJy-VZ-Wg7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Результаты последней игры." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcH-OK-q06">
+                                <rect key="frame" x="57" y="723" width="300" height="27.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="UM1-oa-B7b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата игры:   " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJc-5w-nEy">
+                                <rect key="frame" x="87" y="817.5" width="240" height="21.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="VRV-u4-HRt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dJc-5w-nEy" firstAttribute="top" secondItem="KvZ-01-Zfm" secondAttribute="bottom" constant="8" symbolic="YES" id="B82-pf-6aK"/>
+                            <constraint firstItem="dJc-5w-nEy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="Eff-N2-7jD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pLb-7k-zou" secondAttribute="bottom" constant="82" id="GBb-9h-1Fa"/>
+                            <constraint firstItem="KcH-OK-q06" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="JWz-a0-7fJ"/>
+                            <constraint firstItem="zvp-RC-ish" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="RaH-Rn-wKl"/>
+                            <constraint firstItem="EvF-k1-Xsa" firstAttribute="top" secondItem="zvp-RC-ish" secondAttribute="bottom" constant="100" id="Zad-9k-6Kc"/>
+                            <constraint firstItem="KvZ-01-Zfm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Zkn-p0-f2C"/>
+                            <constraint firstItem="pLb-7k-zou" firstAttribute="top" secondItem="KcH-OK-q06" secondAttribute="bottom" constant="8" symbolic="YES" id="a42-cs-brs"/>
+                            <constraint firstItem="zvp-RC-ish" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="g5o-2a-lDU"/>
+                            <constraint firstItem="JHs-EX-dUA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="iRX-TH-kUg"/>
+                            <constraint firstItem="JHs-EX-dUA" firstAttribute="top" secondItem="EvF-k1-Xsa" secondAttribute="bottom" constant="60" id="id7-EZ-LjY"/>
+                            <constraint firstItem="zvp-RC-ish" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kPx-ZG-fEW"/>
+                            <constraint firstItem="EvF-k1-Xsa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="msz-Fq-Okt"/>
+                            <constraint firstItem="pLb-7k-zou" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qXK-hT-A0Y"/>
+                            <constraint firstItem="KvZ-01-Zfm" firstAttribute="top" secondItem="pLb-7k-zou" secondAttribute="bottom" constant="8" symbolic="YES" id="zHz-XV-5bT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dateWin" destination="dJc-5w-nEy" id="YMI-A7-1hH"/>
+                        <outlet property="embleme" destination="zvp-RC-ish" id="Ggp-2U-Gcp"/>
+                        <outlet property="moneyWin" destination="KvZ-01-Zfm" id="9J2-ZW-t1I"/>
+                        <outlet property="newGame" destination="EvF-k1-Xsa" id="Bpy-tM-35n"/>
+                        <outlet property="questionNumber" destination="pLb-7k-zou" id="Zik-CE-OMU"/>
+                        <outlet property="results" destination="JHs-EX-dUA" id="aMZ-JH-EDG"/>
+                        <outlet property="stat" destination="KcH-OK-q06" id="znp-B9-Mwj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="109.82142857142857"/>
+        </scene>
+        <!--Statistic Table View Controller-->
+        <scene sceneID="vat-ja-eI9">
+            <objects>
+                <tableViewController id="fVb-8i-WP4" customClass="StatisticTableViewController" customModule="WhoWantToBeaMillionaire" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="60" estimatedSectionHeaderHeight="-1" sectionFooterHeight="40" estimatedSectionFooterHeight="-1" id="40U-zQ-aVQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.02352941222" green="0.047058824450000002" blue="0.27450981740000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" red="0.02352941222" green="0.047058824450000002" blue="0.27450981740000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="sectionIndexTrackingBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="fVb-8i-WP4" id="YRh-1q-jFN"/>
+                            <outlet property="delegate" destination="fVb-8i-WP4" id="2za-og-dzw"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="statisticTableView" destination="40U-zQ-aVQ" id="Gww-66-FgK"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sMo-9X-miK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1001" y="-534"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="LdI-vc-zcL">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="mRa-4Y-FzR" customClass="GameViewController" customModule="WhoWantToBeaMillionaire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Iyd-Sq-6tE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ifv-10-4Lp">
+                                <rect key="frame" x="10" y="207" width="394" height="250"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" misplaced="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Sqf-R3-cM9">
+                                        <rect key="frame" x="6" y="6" width="382" height="236"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="27"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Sqf-R3-cM9" secondAttribute="trailing" constant="6" id="20y-cr-9Q0"/>
+                                    <constraint firstAttribute="bottom" secondItem="Sqf-R3-cM9" secondAttribute="bottom" constant="6" id="HL5-CE-OsG"/>
+                                    <constraint firstItem="Sqf-R3-cM9" firstAttribute="top" secondItem="Ifv-10-4Lp" secondAttribute="top" constant="6" id="MTO-AW-Kdz"/>
+                                    <constraint firstItem="Sqf-R3-cM9" firstAttribute="leading" secondItem="Ifv-10-4Lp" secondAttribute="leading" constant="6" id="RV1-tq-ata"/>
+                                    <constraint firstAttribute="height" constant="200" id="e5A-FU-MzB"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTK-8g-feN">
+                                <rect key="frame" x="211" y="592" width="197" height="50"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="phL-fR-K76"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="2.circle" catalog="system" title="B" cornerStyle="dynamic">
+                                    <backgroundConfiguration key="background" cornerRadius="10" strokeWidth="3" strokeOutset="4">
+                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                        <color key="strokeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Didot" family="Didot" pointSize="22"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemTealColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonB:" destination="mRa-4Y-FzR" eventType="touchUpInside" id="fgd-aW-V5t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAg-5x-ajl">
+                                <rect key="frame" x="6" y="652" width="195" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="KQd-VP-mZo"/>
+                                    <constraint firstAttribute="width" constant="195" id="OgE-aY-kTB"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="3.circle" catalog="system" title="C" cornerStyle="dynamic">
+                                    <backgroundConfiguration key="background" cornerRadius="10" strokeWidth="3" strokeOutset="4">
+                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                        <color key="strokeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Didot" family="Didot" pointSize="22"/>
+                                    <color key="baseBackgroundColor" systemColor="systemTealColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonC:" destination="mRa-4Y-FzR" eventType="touchUpInside" id="DgA-aK-0EO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6q-Zd-9P9">
+                                <rect key="frame" x="211" y="652" width="197" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="NJf-yE-UFc"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="12" height="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="4.circle" catalog="system" title="D" cornerStyle="dynamic">
+                                    <backgroundConfiguration key="background" cornerRadius="10" strokeWidth="3" strokeOutset="4">
+                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                        <color key="strokeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Didot" family="Didot" pointSize="22"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemTealColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonD:" destination="mRa-4Y-FzR" eventType="touchUpInside" id="jBT-UP-X9F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQ0-RM-Zbz">
+                                <rect key="frame" x="6" y="592" width="195" height="50"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="3Ww-Wt-26b"/>
+                                    <constraint firstAttribute="height" constant="50" id="Mcb-ed-ehK"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="1.circle" catalog="system" title="A" cornerStyle="dynamic">
+                                    <backgroundConfiguration key="background" cornerRadius="10" strokeWidth="3" strokeOutset="4">
+                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                        <color key="strokeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Didot" family="Didot" pointSize="22"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemTealColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonA:" destination="mRa-4Y-FzR" eventType="touchUpInside" id="w1R-vi-kRj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W98-yp-3LM">
+                                <rect key="frame" x="82" y="772" width="250" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="OJP-12-jYb"/>
+                                    <constraint firstAttribute="height" constant="50" id="WWD-Ni-uii"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="arrowshape.turn.up.forward" catalog="system" title="  Button" cornerStyle="dynamic">
+                                    <backgroundConfiguration key="background" strokeWidth="3" strokeOutset="4">
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <color key="strokeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Didot" family="Didot" pointSize="22"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="nexQuestion:" destination="mRa-4Y-FzR" eventType="touchUpInside" id="vMu-ib-T0p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUJ-r7-aVX">
+                                <rect key="frame" x="147" y="489" width="120" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="fZl-3g-mTo"/>
+                                    <constraint firstAttribute="width" constant="120" id="nsC-pp-5sj"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Звонок другу" cornerStyle="dynamic">
+                                    <backgroundConfiguration key="background" cornerRadius="10" strokeWidth="3" strokeOutset="4">
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <color key="strokeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Didot" family="Didot" pointSize="16"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdT-dG-PM2">
+                                <rect key="frame" x="10" y="489" width="120" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="AsJ-v6-lmG"/>
+                                    <constraint firstAttribute="height" constant="50" id="x6Z-OU-EGH"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Помощь зала" cornerStyle="dynamic">
+                                    <backgroundConfiguration key="background" cornerRadius="10" strokeWidth="3" strokeOutset="4">
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <color key="strokeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Didot" family="Didot" pointSize="16"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="He1-aa-AYj">
+                                <rect key="frame" x="32" y="174" width="350" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="Ndh-fy-xLQ"/>
+                                    <constraint firstAttribute="height" constant="50" id="jKU-jZ-9aT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UoT-J1-W6g">
+                                <rect key="frame" x="50" y="74" width="314" height="70"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="rublesign.circle" catalog="system" title="  Кошелек" subtitle="" cornerStyle="dynamic">
+                                    <backgroundConfiguration key="background" cornerRadius="10" strokeWidth="3" strokeOutset="4">
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <color key="strokeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Didot" family="Didot" pointSize="24"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJU-36-7T1">
+                                <rect key="frame" x="284" y="489" width="120" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Q8B-XD-Dfj"/>
+                                    <constraint firstAttribute="width" constant="120" id="SG7-wW-MY9"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="50 / 50" cornerStyle="dynamic">
+                                    <backgroundConfiguration key="background" cornerRadius="10" strokeWidth="3" strokeOutset="4">
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <color key="strokeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Didot" family="Didot" pointSize="16"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="fifty:" destination="mRa-4Y-FzR" eventType="touchUpInside" id="V56-1u-t8N"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrg-Xb-Upb">
+                                <rect key="frame" x="368" y="37" width="26" height="31"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kQN-Oq-OkC"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kQN-Oq-OkC" firstAttribute="bottom" secondItem="W98-yp-3LM" secondAttribute="bottom" constant="40" id="14L-VV-GfP"/>
+                            <constraint firstItem="kQN-Oq-OkC" firstAttribute="top" secondItem="jrg-Xb-Upb" secondAttribute="top" constant="7" id="14P-SR-Dne"/>
+                            <constraint firstItem="UoT-J1-W6g" firstAttribute="centerX" secondItem="kQN-Oq-OkC" secondAttribute="centerX" id="3Cg-lv-bVF"/>
+                            <constraint firstItem="Ifv-10-4Lp" firstAttribute="top" secondItem="kQN-Oq-OkC" secondAttribute="top" constant="200" id="549-qa-iJm"/>
+                            <constraint firstItem="yQ0-RM-Zbz" firstAttribute="trailing" secondItem="LAg-5x-ajl" secondAttribute="trailing" id="6K2-el-IJZ"/>
+                            <constraint firstItem="wTK-8g-feN" firstAttribute="leading" secondItem="yQ0-RM-Zbz" secondAttribute="trailing" constant="10" id="8aV-Oh-Pdu"/>
+                            <constraint firstItem="xUJ-r7-aVX" firstAttribute="centerX" secondItem="kQN-Oq-OkC" secondAttribute="centerX" id="A3R-2X-eh7"/>
+                            <constraint firstItem="W98-yp-3LM" firstAttribute="centerX" secondItem="kQN-Oq-OkC" secondAttribute="centerX" id="CMd-iV-ALd"/>
+                            <constraint firstItem="Ifv-10-4Lp" firstAttribute="leading" secondItem="kQN-Oq-OkC" secondAttribute="leading" constant="10" id="EkW-gC-jHh"/>
+                            <constraint firstItem="UoT-J1-W6g" firstAttribute="leading" secondItem="kQN-Oq-OkC" secondAttribute="leading" constant="50" id="Hzu-xs-A7I"/>
+                            <constraint firstItem="z6q-Zd-9P9" firstAttribute="leading" secondItem="LAg-5x-ajl" secondAttribute="trailing" constant="10" id="Jwg-S2-HSe"/>
+                            <constraint firstItem="He1-aa-AYj" firstAttribute="top" secondItem="UoT-J1-W6g" secondAttribute="bottom" constant="30" id="LsP-6W-lUG"/>
+                            <constraint firstItem="LAg-5x-ajl" firstAttribute="top" secondItem="yQ0-RM-Zbz" secondAttribute="bottom" constant="10" id="T3z-vf-Wah"/>
+                            <constraint firstItem="wJU-36-7T1" firstAttribute="top" secondItem="Ifv-10-4Lp" secondAttribute="bottom" constant="45" id="W62-WN-ffD"/>
+                            <constraint firstItem="kQN-Oq-OkC" firstAttribute="trailing" secondItem="jrg-Xb-Upb" secondAttribute="trailing" constant="20" id="WY0-8w-H7g"/>
+                            <constraint firstItem="kQN-Oq-OkC" firstAttribute="trailing" secondItem="wJU-36-7T1" secondAttribute="trailing" constant="10" id="cAO-eN-okL"/>
+                            <constraint firstItem="VdT-dG-PM2" firstAttribute="leading" secondItem="kQN-Oq-OkC" secondAttribute="leading" constant="10" id="e3l-mo-h9k"/>
+                            <constraint firstItem="wTK-8g-feN" firstAttribute="top" secondItem="wJU-36-7T1" secondAttribute="bottom" constant="53" id="f4f-bz-23w"/>
+                            <constraint firstItem="He1-aa-AYj" firstAttribute="centerX" secondItem="kQN-Oq-OkC" secondAttribute="centerX" id="fgX-29-rvR"/>
+                            <constraint firstItem="UoT-J1-W6g" firstAttribute="top" secondItem="kQN-Oq-OkC" secondAttribute="top" constant="30" id="hZn-ia-63T"/>
+                            <constraint firstItem="xUJ-r7-aVX" firstAttribute="top" secondItem="Ifv-10-4Lp" secondAttribute="bottom" constant="45" id="hmN-Ku-MQu"/>
+                            <constraint firstItem="z6q-Zd-9P9" firstAttribute="top" secondItem="wTK-8g-feN" secondAttribute="bottom" constant="10" id="jIY-KS-suG"/>
+                            <constraint firstItem="yQ0-RM-Zbz" firstAttribute="top" secondItem="VdT-dG-PM2" secondAttribute="bottom" constant="53" id="jmg-72-Zrk"/>
+                            <constraint firstItem="VdT-dG-PM2" firstAttribute="top" secondItem="Ifv-10-4Lp" secondAttribute="bottom" constant="45" id="mMb-kb-tXd"/>
+                            <constraint firstItem="kQN-Oq-OkC" firstAttribute="trailing" secondItem="z6q-Zd-9P9" secondAttribute="trailing" constant="6" id="p0V-gF-uD5"/>
+                            <constraint firstItem="Ifv-10-4Lp" firstAttribute="centerX" secondItem="kQN-Oq-OkC" secondAttribute="centerX" id="qdU-B9-ps8"/>
+                            <constraint firstItem="LAg-5x-ajl" firstAttribute="leading" secondItem="kQN-Oq-OkC" secondAttribute="leading" constant="6" id="rtf-QU-7z1"/>
+                            <constraint firstItem="Ifv-10-4Lp" firstAttribute="top" secondItem="He1-aa-AYj" secondAttribute="bottom" constant="20" id="sue-9N-M7j"/>
+                            <constraint firstItem="yQ0-RM-Zbz" firstAttribute="leading" secondItem="LAg-5x-ajl" secondAttribute="leading" id="tFt-o5-E8C"/>
+                            <constraint firstItem="kQN-Oq-OkC" firstAttribute="trailing" secondItem="Ifv-10-4Lp" secondAttribute="trailing" constant="10" id="v8u-UT-Jtg"/>
+                            <constraint firstItem="kQN-Oq-OkC" firstAttribute="trailing" secondItem="wTK-8g-feN" secondAttribute="trailing" constant="6" id="zZh-Pu-Ss8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6it-Il-eit"/>
+                    <connections>
+                        <outlet property="answerA" destination="yQ0-RM-Zbz" id="S5X-oD-UrA"/>
+                        <outlet property="answerB" destination="wTK-8g-feN" id="Let-73-tfY"/>
+                        <outlet property="answerC" destination="LAg-5x-ajl" id="FUR-Vc-ZzY"/>
+                        <outlet property="answerD" destination="z6q-Zd-9P9" id="pDs-IN-N7e"/>
+                        <outlet property="backViewForText" destination="Ifv-10-4Lp" id="xWV-Vr-cmE"/>
+                        <outlet property="countDownLabel" destination="jrg-Xb-Upb" id="FdJ-nX-iGF"/>
+                        <outlet property="fiftyFifty" destination="wJU-36-7T1" id="HpN-Kz-ogz"/>
+                        <outlet property="friedColl" destination="xUJ-r7-aVX" id="bZz-YC-XdW"/>
+                        <outlet property="helpHoll" destination="VdT-dG-PM2" id="AWm-cI-pZn"/>
+                        <outlet property="nexButton" destination="W98-yp-3LM" id="Lee-yd-6Jh"/>
+                        <outlet property="priceOfQuestion" destination="He1-aa-AYj" id="h9S-At-TDj"/>
+                        <outlet property="purse" destination="UoT-J1-W6g" id="xCP-KM-rcl"/>
+                        <outlet property="textViewQuestion" destination="Sqf-R3-cM9" id="s3v-XU-zjy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z2A-Mp-YCr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1024.6376811594205" y="109.82142857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1.circle" catalog="system" width="128" height="121"/>
+        <image name="2.circle" catalog="system" width="128" height="121"/>
+        <image name="3.circle" catalog="system" width="128" height="121"/>
+        <image name="4.circle" catalog="system" width="128" height="121"/>
+        <image name="7Lsds80iqM8iD-" width="474" height="474"/>
+        <image name="arrowshape.turn.up.forward" catalog="system" width="128" height="106"/>
+        <image name="rublesign.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
