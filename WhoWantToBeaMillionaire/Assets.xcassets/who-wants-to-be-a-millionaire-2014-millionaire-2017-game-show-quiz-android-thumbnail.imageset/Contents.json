@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "who-wants-to-be-a-millionaire-2014-millionaire-2017-game-show-quiz-android-thumbnail.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
