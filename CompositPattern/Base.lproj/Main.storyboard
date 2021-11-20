@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cUN-zv-z4g">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Каталог задач-->
+        <scene sceneID="aNI-bp-blC">
+            <objects>
+                <tableViewController id="lyR-VW-Lt2" customClass="TaskTableViewController" customModule="CompositPattern" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="kkO-8u-9qU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="lyR-VW-Lt2" id="HTE-nf-YHy"/>
+                            <outlet property="delegate" destination="lyR-VW-Lt2" id="0ug-JA-0YO"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Каталог задач" id="ne7-3k-34l">
+                        <barButtonItem key="rightBarButtonItem" image="plus.circle" catalog="system" id="5Te-63-xK2">
+                            <connections>
+                                <action selector="newTask:" destination="lyR-VW-Lt2" id="zoP-xV-n3F"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="allTasks" destination="kkO-8u-9qU" id="aPm-bq-5hh"/>
+                        <outlet property="plasNewTask" destination="5Te-63-xK2" id="zRS-lq-GH4"/>
+                        <segue destination="wNR-qZ-WDJ" kind="show" identifier="segueToSubTask" id="263-pL-dc0"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eqf-fU-n2v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1528" y="173"/>
+        </scene>
+        <!--Подзадачи-->
+        <scene sceneID="Ogj-Oh-2dZ">
+            <objects>
+                <tableViewController id="wNR-qZ-WDJ" customClass="SubTaskTableViewController" customModule="CompositPattern" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="0je-37-O60">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="wNR-qZ-WDJ" id="Jlh-Si-g9g"/>
+                            <outlet property="delegate" destination="wNR-qZ-WDJ" id="oel-y9-Byr"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Подзадачи" id="OL4-fA-P1V">
+                        <barButtonItem key="rightBarButtonItem" image="plus.circle" catalog="system" id="cpQ-hc-qaC">
+                            <connections>
+                                <action selector="newSubTask:" destination="wNR-qZ-WDJ" id="D46-s6-5Ao"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="subTaskTableView" destination="0je-37-O60" id="c5Z-Gg-udA"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TcS-JR-byT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2322" y="173"/>
+        </scene>
+        <!--Задачи-->
+        <scene sceneID="spk-hE-VZ6">
+            <objects>
+                <navigationController title="Задачи" wantsFullScreenLayout="YES" id="cUN-zv-z4g" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fm6-QO-n4G">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fTG-nF-rom">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="lyR-VW-Lt2" kind="relationship" relationship="rootViewController" id="fiY-UZ-1Ze"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aqf-ic-DIE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="637" y="172"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
